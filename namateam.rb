@@ -1,6 +1,6 @@
 # arquivo namateam.rb
 
-class JogoDoPlin # Sílvio Santos vem aí, lará lará lará...
+class JogoDoPim # Sílvio Santos vem aí, lará lará lará...
 
 	def initialize(minimo = 1, maximo = 100, nro1 = 5, nro2 = 7, texto1 = 'nama', texto2 = 'team')
     raise "minimo precisa ser um número" unless minimo.is_a?(Numeric)
@@ -22,12 +22,12 @@ class JogoDoPlin # Sílvio Santos vem aí, lará lará lará...
 	def jogo()
 			retorno = ""
 			@minimo.upto(@maximo) do |i|
-			  retorno += plin(i).to_s + (i == @maximo ? "" : ", ")
+			  retorno += pim(i).to_s + (i == @maximo ? "" : ", ")
 			end
-			return retorno
+			puts retorno
 	end
 	
-	def plin(i, nro1 = @nro1, nro2 = @nro2, texto1 = @texto1, texto2 = @texto2)
+	def pim(i, nro1 = @nro1, nro2 = @nro2, texto1 = @texto1, texto2 = @texto2)
 		if i % @nro2 == 0 and i % @nro1 == 0
 			@texto1 + @texto2
 		elsif i % @nro2 == 0
@@ -44,4 +44,6 @@ class JogoDoPlin # Sílvio Santos vem aí, lará lará lará...
 end
 
 #descomente para testar
-#JogoDoPlin.new
+#JogoDoPim.new
+#JogoDoPim.new(1, 100, 3, 5, "fizz", "buzz")
+#JogoDoPim.new(1, 100, 3, 7, "mai", "kon")
