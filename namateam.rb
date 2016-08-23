@@ -47,3 +47,10 @@ end
 #JogoDoPim.new
 #JogoDoPim.new(1, 100, 3, 5, "fizz", "buzz")
 #JogoDoPim.new(1, 100, 3, 7, "mai", "kon")
+
+
+# solução que me agrada pela simplicidade, mas torna os testes mais complexos em minha opinião
+# def jogo_do_pim(min = 1, max = 100, n1 = 5, n2 = 7, txt1 = 'nama', txt2 = 'team')
+#   (min..max).map{|n| case(0) when n % (n1 * n2) then txt1 + txt2 ; when n % n1 then txt1; when n % n2 then txt2; else n end}.join ', ' 
+# end
+#
